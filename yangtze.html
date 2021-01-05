@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>PlasticRivers</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <meta name="keywords" content="footer, address, phone, icons" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    
+    <!-- kaart -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+    <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
+      integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
+      crossorigin=""></script>
+      
+        <img src="https://geobranche.nl/gmd1920/SterreRaven/Images/Lijnbovenaan.png" width="100%" height="100%"> <br><br>
+    </head>
+    <body>
+        <a class="navbar-brand" href="index.html">
+            <img class="logo" src="https://geobranche.nl/gmd1920/SterreRaven/Images//Plastic Rivers.png" alt="logoplasticrivers" width="20%" height="20%"></a>
+            <div class="navigation">
+                <a href=index.html>HOME</a>
+                <div class="dropdown">
+                <a class="active" class="dropbtn">PLASTIC RIVERS</a>
+                       <div class="dropdown-content">
+                           <a href="yangtze.html">YANGTZE</a>
+                           <a href="mekong.html">MEKONG</a>
+                       </div>
+                </div>
+                <a href=Watkanjijdoen.html>WAT KAN JIJ DOEN</a>
+                <a href=contact.html>CONTACT</a>
+             </div>
+        <img src="https://geobranche.nl/gmd1920/SterreRaven/Images/HeaderYangtze.png" width="100%" height="100%">
+
+        <div class="grid-container-yangtze">
+                    <!--social media buttons-->
+        <div class="icon-bar">
+            <a href="https://www.facebook.com/PlasticOceans/" class="facebook"><i class="fa fa-facebook"></i></a> 
+            <a href="https://twitter.com/plasticoceansus" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="https://www.instagram.com/plasticoceans/" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/PlasticOceansInternational" class="youtube"><i class="fa fa-youtube"></i></a> 
+        </div>
+
+        <!-- grid-container-middel1 -->
+            <div class="middle1" style="background-color:white;">
+            <h1>#1 Yangtze</h1>
+                <p>De Yangtze ligt in China en staat bovenaan op het lijstje van de meest vervuilde rivieren ter wereld. De rivier distribueert maar liefst 55% van al het plastic afval van rivieren wereldwijd. Hoe had dit zo ver kunnen komen? <br><br>
+                    <img src="https://geobranche.nl/gmd1920/SterreRaven/Images/arrow-down.png" style="align-items: left;">  
+            </div>
+            <div class="image1">
+                <div id="yangtzemap"></div>
+                <script>
+                    var yangtzemap = L.map('yangtzemap').setView([31.5547, 99.1223], 3); 
+                  
+                    L.esri.basemapLayer('Gray').addTo(yangtzemap);
+                  
+                    L.esri.featureLayer({
+                      url: 'https://services3.arcgis.com/vQ3OYhyPnynK3Zqb/arcgis/rest/services/Yangtze_River_in_China/FeatureServer/0' 
+                    }).addTo(map);
+                    
+                    L.esri.featureLayer({
+                      url: 'https://services3.arcgis.com/vQ3OYhyPnynK3Zqb/arcgis/rest/services/Cities_x_Yangtze/FeatureServer/0'
+                    }).addTo(yangtzemap);
+                  </script>
+            </div>
+        
+            <!-- grid-container-middel2 -->
+            <div class="middle2" style="background-color:#649ca5;">
+                <hr class="line-orange-left">
+            <h4>3DE GROOTSTE RIVIER <br>TER WERELD</h4>
+                <p>De Yangtze is één van de grootste rivieren ter wereld. China heeft veel te danken aan deze rivier, het draagt tot 42% bij aan het BBP van het land via scheepvaart, handel en landbouw. Door de enorme bevolkings- en economische groei is er ook een keerzijde: plastic afval. De Yangtze loopt langs grote steden zoals Chongqing, Wuhan en Shanghai met een toenemende bevolkingsgroei. Daarnaast heeft de sterke economische groei van dit land ook geleid tot een verandering van de levensstijl van de consument, namelijk meer gebruik van plastic. Dit probleem is erg groot aangezien 1/3 van de inwoners van China voor voedsel en water afhankelijk is van de Yangtze (Roth, 2019). </p>
+            </div>
+            <div class="image2" style="background-color:#649ca5;"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/image22.png" style="width:450.1301px; height:266.2975px;"></div>
+        
+        <!-- grid-container-middel3 -->
+            <div class="middle3" style="background-color:#5a8c94;">
+                <hr class="line-orange-left">
+            <h4>WAT IS HET <br>PROBLEEM</h4>
+                <p>Plasticvervuiling in de Yangtze kan grote gevolgen hebben voor de waterzekerheid, de uitputting van de visbestanden en de bredere politieke stabiliteit in de Aziatisch-Pacifische regio:
+                        <br><br><strong>Waterschaarste:</strong>&nbspChina heeft slechts 7% van de totale hoeveelheid zoet water van de wereld tot zijn beschikking en moet hiermee 20% van de wereldbevolking water bezorgen. Er zijn al plannen gemaakt om water vanuit de Yangtze via buizen verder het land in te leiden. Maar dit plan ligt onder druk door de toenemende vervuiling van de Yangtze. Dit komt onder andere door de mode-industrie waarbij veel micro-vezels (vorm van plastic) worden geproduceerd. Slechts 1% hiervan wordt gerecycled en het grootste deel komt in de oceanen terecht (Roth, 2019).
+                        <br><br><strong>Uitputting visbestanden:</strong>&nbspplasticvervuiling zal ook negatieve gevolgen hebben voor de vissen in het Aziatisch-Pacifisch gebied. Deze worden nu al bedreigt door overbevissingen en klimaatverandering. UNEP schat dat de mariene ecosystemen jaarlijks 13 miljard dollar schade lijden door plastic afval. 
+                        <br><br><strong>Politieke spanningen:</strong>&nbspdoor plasticvervuiling en illegale visserij kunnen de spanningen tussen Oost-Aziatische landen toenemen.
+                </p>
+            </div>
+            <div class="image3" style="background-color:#5a8c94;"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/image3.png" style="width: 298.2179px; height: 254.0685px;"></div>
+
+        <!-- grid-container-middel4 --> 
+            <div class="middle4" style="background-color: #507c84;">
+                <hr class="line-orange-left">
+            <h4>MAATREGELEN <br>EN DOELEN</h4>
+            <p>
+                <br><strong>2012:</strong>&nbspuit oveheidsgegevens bleek dat 57,3% van het bemonsterde water van de Yangtze zwaar vervuild was.<br>
+                <br><strong>2014:</strong>&nbspde regering investeert 220 miljard dollar om het waterverontreinigingsprobleem aan te pakken. De regering hoopt de kwaliteit van het water tegen 2030 met 30% tot 50% te verbeteren.<br>
+                <br><strong>2017:</strong>&nbspChina scherpt de handhaving van zijn milieuwetgeving aan, wat tot een onmiddellijke daling van de import van plastic afval leidt.<br>
+                <br><strong>2018:</strong>&nbspChina verbiedt de import van papier, plastic en 22 andere soorten afval (Verdict, 2018)<br>
+                <br><strong>2020:</strong>&nbspDe Chinese regering gaat het gebruik van wegwerpplastic verbieden. China legt beperkingen op voor de productie, verkoop en het gebruik van single-use plastics, om milieuvervuiling in het land aan te pakken.
+                In Yichang, een stad aan de oevers van de Yangtze-rivier, zijn pogingen gedaan om fabrieken weg te halen van de rivierrand om te voorkomen dat afval in het water terechtkomt. 
+            </p>
+            </div>
+            <div class="image4" style="background-color:#507c84;"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/image4.png" style="width: 130px; height: 430;"></div>
+
+            <!--
+            <div id="map">
+            <script src="data.js"></script>
+            <script>
+                var map= L.map ('map').setView([0, 0], 1);
+    
+                L.tileLayer('https://api.maptiler.com/maps/voyager/{z}/{x}/{y}.png?key=nTenkvsXcUxOseVIciCJ', {
+                    attribution: '<a href="https://carto.com/" target="_blank">&copy; CARTO</a> <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors </a>',
+                }). addTo(map);
+                var marker = L.marker([31.224361, 121.469170]).addTo(map);
+                marker.bindPopup("<b> Shanghai <b>").openPopup();
+                var marker = L.marker([30.5951051, 114.2999353]).addTo(map);
+                marker.bindPopup("<b> Wuhan <b>").openPopup();
+                var marker = L.marker([29.563009, 106.551559]).addTo(map);
+                marker.bindPopup("<b> Chongqing <b>").openPopup();
+
+                L.geoJSON(json).addTo(map);             
+            </script>
+                <hr>
+            </div> -->
+            </div>
+
+            <h3 style="margin-left: 300px; margin-top: 100px; margin-bottom: 5px; font-size: 25px; font-family:Roboto Thin;">Dit vind je misschien ook interessant:</h3>
+
+            <!--grid-container-leesmeer-->
+            <div class="grid-container-leesmeer">
+                <div class="leesmeeritem"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/leesmeermekong.png" width="80%"></div>
+                <div class="leesmeeritem"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/leesmeerwatkanjijdoen.png" width="80%"></div>
+                <div class="leesmeeritem"><a class="link-1" href="mekong.html">Lees meer over de Mekong</a></div>
+                <div class="leesmeeritem"><a class="link-1" href="watkanjijdoen.html">Lees meer over wat jij kan doen</a></div>
+            </div>
+
+
+                    <!-- footer -->
+        <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="index.html">Home</a>
+					|
+					<a href="yangtze.html">Yangtze</a>
+                    |
+                    <a href="mekong.html">Mekong</a>
+					|
+					<a href="watkanjijdoen.html">Wat kan jij doen</a>
+					|
+					<a href="contact.html">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2020 Plastic Rivers - Plastic Oceans</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p>28M4+C7 Malibu, California, Verenigde Staten</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 22-22222222</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p>plasticrivers@gmail.com</p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>Over de organisatie</span>
+					Plastic Oceans International is een wereldwijde non-profitorganisatie die zich inzet om plasticvervuiling in wateren te verminderen.
+                    De organisatie doet dit in verschillende vormen: activisme, belangenbehartiging, educatie, film & content creatie, wetenschap en
+                    sociaal ondernemerschap. 
+                </p>
+				<div class="footer-icons">
+					<a href="https://www.facebook.com/PlasticOceans/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/plasticoceansus"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/plasticoceans/"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.youtube.com/c/PlasticOceansInternational"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+    </body>
+</html>

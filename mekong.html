@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>PlasticRivers</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <meta name="keywords" content="footer, address, phone, icons" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- kaart -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+    <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
+      integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
+      crossorigin=""></script>
+
+        <img src="https://geobranche.nl/gmd1920/SterreRaven/Images/Lijnbovenaan.png" width="100%" height="100%"> <br><br>
+    </head>
+    <body>
+        <a class="navbar-brand" href="index.html">
+            <img class="logo" src="https://geobranche.nl/gmd1920/SterreRaven/Images//Plastic Rivers.png" alt="logoplasticrivers" width="20%" height="20%"></a>
+            <div class="navigation">
+                <a href=index.html>HOME</a>
+                <div class="dropdown">
+                <a class="active" class="dropbtn">PLASTIC RIVERS</a>
+                       <div class="dropdown-content">
+                           <a href="yangtze.html">YANGTZE</a>
+                           <a href="mekong.html">MEKONG</a>
+                       </div>
+                </div>
+                <a href=Watkanjijdoen.html>WAT KAN JIJ DOEN</a>
+                <a href=contact.html>CONTACT</a>
+             </div>
+        <img src="https://geobranche.nl/gmd1920/SterreRaven/Images/HeaderMekong.png" width="100%" height="100%">
+
+        <div class="grid-container-mekong">
+                    <!--social media buttons-->
+        <div class="icon-bar">
+            <a href="https://www.facebook.com/PlasticOceans/" class="facebook"><i class="fa fa-facebook"></i></a> 
+            <a href="https://twitter.com/plasticoceansus" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="https://www.instagram.com/plasticoceans/" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/PlasticOceansInternational" class="youtube"><i class="fa fa-youtube"></i></a> 
+        </div>
+        
+        <!-- grid-container middle1 -->
+        <div class="mekong-middle1" style="background-color:white;">
+            <h1>#10 Mekong</h1>
+                <p>De Mekong ligt in Vietnam en staat op nummer 10 op het lijstje van de meest vervuilde rivier ter wereld. Er wordt geschat dat Vietnam meer dan 1,8 miljoen ton plastic afval loost. Waar komt dit plastic vandaan en wat kan er gedaan worden om dit te verminderen?  <br><br>
+                <img src="https://geobranche.nl/gmd1920/SterreRaven/Images/arrow-down.png" style="align-items: left;">  
+        </div>
+        <div class="mekong-image1">
+            <div id="mekongmap"></div>
+            <script>
+                var mekongmap = L.map('mekongmap').setView([17.974855, 102.630867], 4); 
+              
+                L.esri.basemapLayer('Gray').addTo(mekongmap);
+              
+                L.esri.featureLayer({
+                  url: 'https://services1.arcgis.com/afGgcgqM3caiSYv7/arcgis/rest/services/Mekong_River/FeatureServer/0', 
+                }).addTo(mekongmap);
+              
+              </script>
+        </div>
+
+        <!-- grid-container middle2 -->
+        <div class="mekong-middle2" style="background-color:#649ca5;">
+            <hr class="line-orange-left">
+            <h4>Toename van het gebruik van plastic</h4>
+                <p>De plasticconsumptie per hoofd van de bevolking in Vietnam is sterk gestegen van 3,8 kg per persoon in 1990 tot 41,3 kg per persoon in 2018. Het plastic afval verspreidt zich op zee, in steden, rijstvelden en in rivieren. In de Mekong Delta, de zogenaamde rijstkom van Vietnam, komen veel chemische stoffen van plastic afval vrij.</p>
+        </div>
+        <div class="mekong-image2" style="background-color:#649ca5;"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/mekong-image2.png" width="315px" height="243.6596px"></div>
+        
+        <!-- grid-container middle3 --> 
+        <div class="mekong-middle3" style="background-color:#5a8c94;">
+            <hr class="line-orange-left">  
+            <h4>Plastic op de oevers</h4>
+                <p>Op de oever van de Mekong zijn grote stapels aan plasticverpakkingen. De mensen en boeren van de rijstvelden loodsen het plastic en ander afval vaak in de rivier of op de oever omdat dat het makkelijkst is. <br> Voor de gemeente van Vinh Long Province in Vietnam zijn er slechts 15 afvalbakken beschikbaar voor 1.400 hectare aan rijst- en fruitgrond. Heel weinig mensen gebruiken deze bakken omdat er geen regelgeving voor het beboeten is. </p>
+        </div>
+        <div class="mekong-image3" style="background-color:#5a8c94;"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/mekong-image3.png" width="351.8933px" height="220.9027px"></div>
+
+        <!-- grid-container middle4 -->  
+        <div class="mekong-middle4" style="background-color: #507c84;">
+            <hr class="line-orange-left">
+            <h4>Het dodelijke gemak</h4>
+                <p> Gemiddeld lozen de boeren ongeveer 1-1,5 kg aan verpakkingen, flessen en blikken in het milieu voor elke hectare rijst of andere gewassen. Bij       industriële gewassen verdubbelt of verdrievoudigt de hoeveelheid.
+                    Volgens het Ministerie van Natuurlijke Hulpbronnen en Milieu verbruikt elk huishouden in Vietnam gemiddeld ongeveer een kilo plastic zakken per maand of 35 plastic zakken per week. De dagelijkse hoeveelheid plastic bekers en stro die uit cafés en restaurants wordt weggegooid is ontelbaar (Tuyen, 2019).
+                    </p>
+        </div>
+        <div class="mekong-image4" style="background-color:#507c84;"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/mekong-image4.png" width="212px" height="323.0515px"></div>
+
+        <!-- grid-container middle5 --> 
+        <div class="mekong-middle5" style="background-color: #466d73;">
+            <hr class="line-orange-left">
+            <h4>Maatregelen en doelen</h4>
+            <p>
+                <strong>2009:</strong>&nbspEen project ter bevordering van tegenmaatregelen tegen het mariene plastic afval in Zuidoost-Azië en India. Het heeft tot doel de plastic vervuiling in waterwegen zoals de Mekong te bestuderen.
+                <br><br><strong>2019:</strong>&nbspInterceptor van TheOceanCleanup wordt geïnstalleerd in Can Tho in de Mekong River. Het systeem is volgens de ontwikkelaars in staat om 50.000 kg afval per dag op te vissen.
+                <br><br><strong>2020:</strong>&nbspVietnam en drie Mekong-buren gaan de handen ineen slaan om het lekken van plastic afval in het riviersysteem te beoordelen in een poging de plasticvervuiling in de regio te bestrijden.  
+            </p>
+        </div>
+        <div class="mekong-image5" style="background-color:#466d73;"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/mekong-image5.png" widht="87px" height="286px"></div>
+        </div>
+
+
+            <!--grid-container-leesmeer-->
+            <h3 style="margin-left: 300px; margin-top: 100px; margin-bottom: 5px; font-size: 25px; font-family:Roboto Thin;">Dit vind je misschien ook interessant:</h3>
+                <div class="grid-container-leesmeer">
+                    <div class="leesmeeritem"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/leesmeeryangtze.png" width="80%"></div>
+                    <div class="leesmeeritem"><img src="https://geobranche.nl/gmd1920/SterreRaven/Images/leesmeerwatkanjijdoen.png" width="80%"></div>
+                    <div class="leesmeeritem"><a class="link-1" href="yangtze.html">Lees meer over de Yangtze</a></div>
+                    <div class="leesmeeritem"><a class="link-1" href="watkanjijdoen.html">Lees meer over wat jij kan doen</a></div>
+                </div>
+
+
+                <!-- footer -->
+                <footer class="footer-distributed">
+
+                    <div class="footer-left">
+        
+                        <p class="footer-links">
+                            <a href="index.html">Home</a>
+                            |
+                            <a href="yangtze.html">Yangtze</a>
+                            |
+                            <a href="mekong.html">Mekong</a>
+                            |
+                            <a href="watkanjijdoen.html">Wat kan jij doen</a>
+                            |
+                            <a href="contact.html">Contact</a>
+                        </p>
+        
+                        <p class="footer-company-name">© 2020 Plastic Rivers - Plastic Oceans</p>
+                    </div>
+        
+                    <div class="footer-center">
+                        <div>
+                            <i class="fa fa-map-marker"></i>
+                              <p>28M4+C7 Malibu, California, Verenigde Staten</p>
+                        </div>
+        
+                        <div>
+                            <i class="fa fa-phone"></i>
+                            <p>+91 22-22222222</p>
+                        </div>
+                        <div>
+                            <i class="fa fa-envelope"></i>
+                            <p>plasticrivers@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <p class="footer-company-about">
+                            <span>Over de organisatie</span>
+                            Plastic Oceans International is een wereldwijde non-profitorganisatie die zich inzet om plasticvervuiling in wateren te verminderen.
+                            De organisatie doet dit in verschillende vormen: activisme, belangenbehartiging, educatie, film & content creatie, wetenschap en
+                            sociaal ondernemerschap. 
+                        </p>
+                        <div class="footer-icons">
+                            <a href="https://www.facebook.com/PlasticOceans/"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/plasticoceansus"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/plasticoceans/"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/c/PlasticOceansInternational"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </footer>
+    </body>
+</html>
